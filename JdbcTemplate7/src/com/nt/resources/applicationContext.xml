@@ -13,12 +13,13 @@
 		  <property name="username" value="root"/>
 		  <property name="password" value=""/>    
         </bean>
-        <bean id="JdbcTemplate"  class="org.springframework.jdbc.core.JdbcTemplate">
-        <constructor-arg ref="dataSource"/>
-        </bean>
+<!--         <bean id="JdbcTemplate"  class="org.springframework.jdbc.core.JdbcTemplate"> -->
+<!--         <constructor-arg ref="dataSource"/> -->
+<!--         </bean> -->
         <!-- If not Provided, it shows dataSource,JdbcTemplate is required-->
         <bean id="empdao" class="com.nt.dao.EmployeeDaoImpl">
-        <property name="JdbcTemplate" ref="JdbcTemplate"/>
+<!--         <property name="JdbcTemplate" ref="JdbcTemplate"/> -->
+			<property name="dataSource" ref="dataSource"/>
         </bean>
         
         </beans>
